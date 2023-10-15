@@ -9,3 +9,4 @@
 - Add app shortcuts in dock for easy running
 - Add button for running "winecfg" in settings panel
 - Fix `CellarApp.showModal` not doing anything when "OK" button pushed
+- Add setting for Wine HiDPI
