@@ -7,19 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3307A27A2AD7FB750080705C /* AppGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307A2792AD7FB750080705C /* AppGridItem.swift */; };
+		3307A27C2AD8074A0080705C /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307A27B2AD8074A0080705C /* AppsView.swift */; };
+		33106EA02ADAA8440089A2D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106E9F2ADAA8440089A2D1 /* SettingsView.swift */; };
+		33106EA22ADAA88C0089A2D1 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */; };
+		33106EA42ADAA8930089A2D1 /* WineSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */; };
+		33106EA62ADAA8D40089A2D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA52ADAA8D40089A2D1 /* Settings.swift */; };
 		336AC63C2AC9934F0036E71A /* CellarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336AC63B2AC9934F0036E71A /* CellarApp.swift */; };
-		336AC63E2AC9934F0036E71A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336AC63D2AC9934F0036E71A /* ContentView.swift */; };
 		336AC6402AC993500036E71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336AC63F2AC993500036E71A /* Assets.xcassets */; };
 		336AC6432AC993500036E71A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 336AC6422AC993500036E71A /* Preview Assets.xcassets */; };
+		33A485202AD0812C00F096FA /* WineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4851F2AD0812C00F096FA /* WineApp.swift */; };
+		33A485222AD0817B00F096FA /* WinePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A485212AD0817B00F096FA /* WinePath.swift */; };
+		33A4852A2AD0826900F096FA /* CellarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A485292AD0826900F096FA /* CellarTests.swift */; };
+		33A5180B2AD1D43C00C9FD46 /* AppListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5180A2AD1D43C00C9FD46 /* AppListItem.swift */; };
+		33B9E13F2AD1D7C900F7C30B /* EditAppSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9E13E2AD1D7C900F7C30B /* EditAppSheetView.swift */; };
+		33B9E1412AD1D7F000F7C30B /* AppEditForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9E1402AD1D7F000F7C30B /* AppEditForm.swift */; };
+		33B9E1472AD2B9CD00F7C30B /* Cellar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33B9E1452AD2B9CD00F7C30B /* Cellar.xcdatamodeld */; };
+		33B9E1492AD2BA1400F7C30B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9E1482AD2BA1400F7C30B /* DataController.swift */; };
+		33C3026D2ACBE6B900FE1B2F /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3026C2ACBE6B900FE1B2F /* AppListView.swift */; };
+		33C3026F2ACC5BD900FE1B2F /* AppGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3026E2ACC5BD900FE1B2F /* AppGridView.swift */; };
+		33C302742ACC5BFC00FE1B2F /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C302732ACC5BFC00FE1B2F /* Context.swift */; };
+		33D9ED732AD9135E0098963C /* CurrentlyRunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D9ED722AD9135E0098963C /* CurrentlyRunningView.swift */; };
+		33D9ED752AD98B1E0098963C /* View+OptionalAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D9ED742AD98B1E0098963C /* View+OptionalAttribute.swift */; };
+		33D9ED772AD98D240098963C /* WineEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D9ED762AD98D240098963C /* WineEnvironment.swift */; };
+		33DA72892AD086CE009AE60E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DA72882AD086CE009AE60E /* ContentView.swift */; };
+		33DA728B2AD09075009AE60E /* CellarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DA728A2AD09075009AE60E /* CellarError.swift */; };
+		33DA728E2AD094D7009AE60E /* NewAppSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DA728D2AD094D7009AE60E /* NewAppSheetView.swift */; };
+		33DA72902AD096CD009AE60E /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DA728F2AD096CD009AE60E /* IconPicker.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		33A4852B2AD0826900F096FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 336AC6302AC9934F0036E71A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 336AC6372AC9934F0036E71A;
+			remoteInfo = Cellar;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3307A2792AD7FB750080705C /* AppGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGridItem.swift; sourceTree = "<group>"; };
+		3307A27B2AD8074A0080705C /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
+		33106E9F2ADAA8440089A2D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSettingsView.swift; sourceTree = "<group>"; };
+		33106EA52ADAA8D40089A2D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		33106EA82ADBD86C0089A2D1 /* cellar_app_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellar_app_preview.png; sourceTree = "<group>"; };
+		33106EA92ADBDA630089A2D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		336AC6382AC9934F0036E71A /* Cellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336AC63B2AC9934F0036E71A /* CellarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarApp.swift; sourceTree = "<group>"; };
-		336AC63D2AC9934F0036E71A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		336AC63F2AC993500036E71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		336AC6422AC993500036E71A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		336AC6442AC993500036E71A /* Cellar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cellar.entitlements; sourceTree = "<group>"; };
+		336AC64A2AC993590036E71A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		336AC64B2AC993AA0036E71A /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		33A4851F2AD0812C00F096FA /* WineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineApp.swift; sourceTree = "<group>"; };
+		33A485212AD0817B00F096FA /* WinePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinePath.swift; sourceTree = "<group>"; };
+		33A485272AD0826900F096FA /* CellarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A485292AD0826900F096FA /* CellarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarTests.swift; sourceTree = "<group>"; };
+		33A5180A2AD1D43C00C9FD46 /* AppListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItem.swift; sourceTree = "<group>"; };
+		33B9E13E2AD1D7C900F7C30B /* EditAppSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAppSheetView.swift; sourceTree = "<group>"; };
+		33B9E1402AD1D7F000F7C30B /* AppEditForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEditForm.swift; sourceTree = "<group>"; };
+		33B9E1462AD2B9CD00F7C30B /* Cellar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cellar.xcdatamodel; sourceTree = "<group>"; };
+		33B9E1482AD2BA1400F7C30B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		33C3026C2ACBE6B900FE1B2F /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
+		33C3026E2ACC5BD900FE1B2F /* AppGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGridView.swift; sourceTree = "<group>"; };
+		33C302732ACC5BFC00FE1B2F /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		33D9ED722AD9135E0098963C /* CurrentlyRunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyRunningView.swift; sourceTree = "<group>"; };
+		33D9ED742AD98B1E0098963C /* View+OptionalAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OptionalAttribute.swift"; sourceTree = "<group>"; };
+		33D9ED762AD98D240098963C /* WineEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineEnvironment.swift; sourceTree = "<group>"; };
+		33DA72882AD086CE009AE60E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		33DA728A2AD09075009AE60E /* CellarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarError.swift; sourceTree = "<group>"; };
+		33DA728D2AD094D7009AE60E /* NewAppSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppSheetView.swift; sourceTree = "<group>"; };
+		33DA728F2AD096CD009AE60E /* IconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,13 +91,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33A485242AD0826900F096FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33106E9E2ADAA8390089A2D1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				33106E9F2ADAA8440089A2D1 /* SettingsView.swift */,
+				33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */,
+				33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		33106EA72ADBD85B0089A2D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33106EA82ADBD86C0089A2D1 /* cellar_app_preview.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		336AC62F2AC9934F0036E71A = {
 			isa = PBXGroup;
 			children = (
+				336AC64A2AC993590036E71A /* README.md */,
+				336AC64B2AC993AA0036E71A /* TODO.md */,
+				33106EA92ADBDA630089A2D1 /* .gitignore */,
+				33106EA72ADBD85B0089A2D1 /* Resources */,
 				336AC63A2AC9934F0036E71A /* Cellar */,
+				33A485282AD0826900F096FA /* CellarTests */,
 				336AC6392AC9934F0036E71A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				336AC6382AC9934F0036E71A /* Cellar.app */,
+				33A485272AD0826900F096FA /* CellarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				336AC63B2AC9934F0036E71A /* CellarApp.swift */,
-				336AC63D2AC9934F0036E71A /* ContentView.swift */,
+				33C302722ACC5BF400FE1B2F /* Helpers */,
+				33C302702ACC5BE400FE1B2F /* Views */,
 				336AC63F2AC993500036E71A /* Assets.xcassets */,
 				336AC6442AC993500036E71A /* Cellar.entitlements */,
+				33B9E1452AD2B9CD00F7C30B /* Cellar.xcdatamodeld */,
 				336AC6412AC993500036E71A /* Preview Content */,
 			);
 			path = Cellar;
@@ -67,6 +161,56 @@
 				336AC6422AC993500036E71A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33A485282AD0826900F096FA /* CellarTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A485292AD0826900F096FA /* CellarTests.swift */,
+			);
+			path = CellarTests;
+			sourceTree = "<group>";
+		};
+		33C302702ACC5BE400FE1B2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33106E9E2ADAA8390089A2D1 /* Settings */,
+				33DA72882AD086CE009AE60E /* ContentView.swift */,
+				3307A27B2AD8074A0080705C /* AppsView.swift */,
+				33D9ED722AD9135E0098963C /* CurrentlyRunningView.swift */,
+				33C3026C2ACBE6B900FE1B2F /* AppListView.swift */,
+				33C3026E2ACC5BD900FE1B2F /* AppGridView.swift */,
+				33DA728D2AD094D7009AE60E /* NewAppSheetView.swift */,
+				33B9E13E2AD1D7C900F7C30B /* EditAppSheetView.swift */,
+				33DA728C2AD094CC009AE60E /* Helpers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33C302722ACC5BF400FE1B2F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				33C302732ACC5BFC00FE1B2F /* Context.swift */,
+				33106EA52ADAA8D40089A2D1 /* Settings.swift */,
+				33DA728A2AD09075009AE60E /* CellarError.swift */,
+				33A4851F2AD0812C00F096FA /* WineApp.swift */,
+				33A485212AD0817B00F096FA /* WinePath.swift */,
+				33B9E1482AD2BA1400F7C30B /* DataController.swift */,
+				33D9ED762AD98D240098963C /* WineEnvironment.swift */,
+				33D9ED742AD98B1E0098963C /* View+OptionalAttribute.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		33DA728C2AD094CC009AE60E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				33B9E1402AD1D7F000F7C30B /* AppEditForm.swift */,
+				33DA728F2AD096CD009AE60E /* IconPicker.swift */,
+				33A5180A2AD1D43C00C9FD46 /* AppListItem.swift */,
+				3307A2792AD7FB750080705C /* AppGridItem.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +233,24 @@
 			productReference = 336AC6382AC9934F0036E71A /* Cellar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		33A485262AD0826900F096FA /* CellarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A4852D2AD0826900F096FA /* Build configuration list for PBXNativeTarget "CellarTests" */;
+			buildPhases = (
+				33A485232AD0826900F096FA /* Sources */,
+				33A485242AD0826900F096FA /* Frameworks */,
+				33A485252AD0826900F096FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A4852C2AD0826900F096FA /* PBXTargetDependency */,
+			);
+			name = CellarTests;
+			productName = CellarTests;
+			productReference = 33A485272AD0826900F096FA /* CellarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +263,10 @@
 				TargetAttributes = {
 					336AC6372AC9934F0036E71A = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					33A485262AD0826900F096FA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 336AC6372AC9934F0036E71A;
 					};
 				};
 			};
@@ -118,6 +284,7 @@
 			projectRoot = "";
 			targets = (
 				336AC6372AC9934F0036E71A /* Cellar */,
+				33A485262AD0826900F096FA /* CellarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +299,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33A485252AD0826900F096FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +313,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				336AC63E2AC9934F0036E71A /* ContentView.swift in Sources */,
+				33B9E13F2AD1D7C900F7C30B /* EditAppSheetView.swift in Sources */,
+				33C3026D2ACBE6B900FE1B2F /* AppListView.swift in Sources */,
+				3307A27A2AD7FB750080705C /* AppGridItem.swift in Sources */,
+				33DA728B2AD09075009AE60E /* CellarError.swift in Sources */,
+				33106EA42ADAA8930089A2D1 /* WineSettingsView.swift in Sources */,
+				33106EA22ADAA88C0089A2D1 /* GeneralSettingsView.swift in Sources */,
+				33D9ED752AD98B1E0098963C /* View+OptionalAttribute.swift in Sources */,
+				33A5180B2AD1D43C00C9FD46 /* AppListItem.swift in Sources */,
+				33DA72902AD096CD009AE60E /* IconPicker.swift in Sources */,
+				33106EA02ADAA8440089A2D1 /* SettingsView.swift in Sources */,
+				33DA72892AD086CE009AE60E /* ContentView.swift in Sources */,
+				33B9E1472AD2B9CD00F7C30B /* Cellar.xcdatamodeld in Sources */,
+				33A485202AD0812C00F096FA /* WineApp.swift in Sources */,
+				3307A27C2AD8074A0080705C /* AppsView.swift in Sources */,
+				33C3026F2ACC5BD900FE1B2F /* AppGridView.swift in Sources */,
+				33D9ED772AD98D240098963C /* WineEnvironment.swift in Sources */,
+				33C302742ACC5BFC00FE1B2F /* Context.swift in Sources */,
+				33B9E1492AD2BA1400F7C30B /* DataController.swift in Sources */,
+				33106EA62ADAA8D40089A2D1 /* Settings.swift in Sources */,
+				33B9E1412AD1D7F000F7C30B /* AppEditForm.swift in Sources */,
 				336AC63C2AC9934F0036E71A /* CellarApp.swift in Sources */,
+				33D9ED732AD9135E0098963C /* CurrentlyRunningView.swift in Sources */,
+				33DA728E2AD094D7009AE60E /* NewAppSheetView.swift in Sources */,
+				33A485222AD0817B00F096FA /* WinePath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A485232AD0826900F096FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A4852A2AD0826900F096FA /* CellarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33A4852C2AD0826900F096FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 336AC6372AC9934F0036E71A /* Cellar */;
+			targetProxy = 33A4852B2AD0826900F096FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		336AC6452AC993500036E71A /* Debug */ = {
@@ -279,12 +491,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dcas796.Cellar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -306,16 +519,51 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dcas796.Cellar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		33A4852E2AD0826900F096FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ8VJZ95NP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcas796.CellarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cellar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cellar";
+			};
+			name = Debug;
+		};
+		33A4852F2AD0826900F096FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQ8VJZ95NP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcas796.CellarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cellar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cellar";
 			};
 			name = Release;
 		};
@@ -340,7 +588,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		33A4852D2AD0826900F096FA /* Build configuration list for PBXNativeTarget "CellarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A4852E2AD0826900F096FA /* Debug */,
+				33A4852F2AD0826900F096FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33B9E1452AD2B9CD00F7C30B /* Cellar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33B9E1462AD2B9CD00F7C30B /* Cellar.xcdatamodel */,
+			);
+			currentVersion = 33B9E1462AD2B9CD00F7C30B /* Cellar.xcdatamodel */;
+			path = Cellar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 336AC6302AC9934F0036E71A /* Project object */;
 }
