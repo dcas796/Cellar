@@ -120,7 +120,16 @@ final class Context: ObservableObject {
             }
         }
     }
-
+    
+    func run(command: String) {
+        dispatchAsync {
+            try await self.environment.run(command: command)
+            await MainActor.run {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
     func throwing<T>(_ code: () throws -> T) -> T? {
         do {
             return try code()

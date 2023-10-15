@@ -10,6 +10,8 @@ import Foundation
 final class WineEnvironment: ObservableObject {
     typealias OSProcess = Foundation.Process
     
+    let interpreterPath = WinePath(path: "C:\\Windows\\System32\\cmd.exe")!
+    
     @Published var initializingApps: Set<WineApp> = []
     @Published var runningProcesses: Set<Process> = []
     
@@ -33,7 +35,7 @@ final class WineEnvironment: ObservableObject {
         print("Starting app: \(app)")
         initializingApps.insert(app)
         
-        let process = try await startProcess(app: app)
+        let process = try await startProcess(app: app, isCommand: false)
         
         initializingApps.remove(app)
         runningProcesses.insert(process)
@@ -55,13 +57,23 @@ final class WineEnvironment: ObservableObject {
         runningProcesses.remove(process)
     }
     
+    @discardableResult
+    func run(command: String) async throws -> Process {
+        let app = WineApp(name: command,
+                          winePath: interpreterPath,
+                          arguments: ["/c", command])
+        let process = try await startProcess(app: app, isCommand: true)
+        runningProcesses.insert(process)
+        return process
+    }
+    
     private func checkExecutableExists() throws {
         guard FileManager.default.fileExists(atPath: wineExecutable.path(percentEncoded: false)) else {
             throw CellarError.wineExecutableNotFound
         }
     }
     
-    private func startProcess(app: WineApp) async throws -> Process {
+    private func startProcess(app: WineApp, isCommand: Bool) async throws -> Process {
         let osProcess = OSProcess()
         osProcess.executableURL = wineExecutable
         
@@ -92,7 +104,8 @@ final class WineEnvironment: ObservableObject {
                        osProcess: osProcess,
                        pid: osProcess.processIdentifier,
                        executableURL: wineExecutable,
-                       arguments: arguments)
+                       arguments: arguments,
+                       isCommand: isCommand)
     }
     
     private func stopProcess(process: Process, force: Bool) async throws {
@@ -119,6 +132,7 @@ extension WineEnvironment {
         var pid: Int32
         var executableURL: URL
         var arguments: [String]
+        var isCommand: Bool
     }
 }
 

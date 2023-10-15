@@ -1,6 +1,5 @@
 # TODO
 
-- Run dialog
 - Add button for running "winecfg" in settings panel
 - Add setting for Wine HiDPI
 - Delete (with backspace) icon in `IconPicker`
@@ -10,3 +9,4 @@
 - Automatically get icon from .exe
 - Add app shortcuts in dock for easy running
 - Fix `CellarApp.showModal` not doing anything when "OK" button pushed
+- Add separate section in `CurrentlyRunningView` for Run commands

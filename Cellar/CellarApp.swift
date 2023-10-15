@@ -10,17 +10,36 @@ import SwiftUI
 @main
 struct CellarApp: App {
     @Environment(\.scenePhase) var scenePhase: ScenePhase
+    @Environment(\.openWindow) var openWindow: OpenWindowAction
+    
+    @StateObject var context = Context()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(Context())
+                .environmentObject(context)
         }
         .onChange(of: scenePhase) {
             (try? DataController.shared?.save()) ?? {
                 print("[CellarApp] Could not auto-save.")
             }()
         }
+        .commands {
+            CommandGroup(replacing: .newItem) {
+                Button("Run") {
+                    openWindow(id: "run")
+                }
+                .keyboardShortcut(.init("R"))
+            }
+        }
+        
+        Window("Run", id: "run") {
+            RunView()
+                .environmentObject(context)
+                .padding()
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
         
         SwiftUI.Settings {
             SettingsView()
