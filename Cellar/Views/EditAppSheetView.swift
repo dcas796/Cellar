@@ -61,9 +61,7 @@ struct EditAppSheetView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     EditAppSheetView(app: .constant(.default))
         .environmentObject(Context())
 }
-#endif

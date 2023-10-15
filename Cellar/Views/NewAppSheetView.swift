@@ -51,9 +51,7 @@ struct NewAppSheetView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     NewAppSheetView()
         .environmentObject(Context())
 }
-#endif

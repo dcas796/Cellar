@@ -20,13 +20,7 @@ final class Context: ObservableObject {
     @Published var isEditAppPresent: Bool = false
     var editApp: WineApp?
     
-    private let wineAppEntityrequest = {
-        let request = WineAppEntity.fetchRequest()
-//        request.sortDescriptors = [
-//            NSSortDescriptor(keyPath: \WineAppEntity.name, ascending: true)
-//        ]
-        return request
-    }()
+    private let wineAppEntityrequest = WineAppEntity.fetchRequest()
     
     var apps: Array<WineApp> {
         do {

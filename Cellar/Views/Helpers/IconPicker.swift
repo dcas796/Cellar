@@ -143,9 +143,7 @@ struct IconPicker: View {
     }
 }
 
-#if DEBUG
 #Preview {
     IconPicker(icon: .constant(nil))
         .environmentObject(Context())
 }
-#endif

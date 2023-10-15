@@ -28,10 +28,8 @@ struct AppGridView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     AppGridView(apps: Context().apps)
         .environmentObject(Context())
         .frame(width: 400, height: 400)
 }
-#endif

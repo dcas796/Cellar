@@ -56,10 +56,8 @@ struct AppListItem: View {
     }
 }
 
-#if DEBUG
 #Preview {
     AppListItem(app: WineApp.default)
         .environmentObject(Context())
         .padding(10)
 }
-#endif

@@ -21,8 +21,6 @@ struct AppListView: View {
     }
 }
 
-#if DEBUG
 #Preview {
     AppListView(apps: Context().apps)
 }
-#endif

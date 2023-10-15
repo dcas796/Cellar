@@ -54,11 +54,10 @@ struct ContentView: View {
                     description: "This action cannot be undone.",
                     showsCancelButton: true,
                     blocking: false) {
-                        print("Destroying :)")
-//                        context.throwing {
-//                            try DataController.shared?.destroy()
-//                        }
-//                        context.objectWillChange.send()
+                        context.throwing {
+                            try DataController.shared?.destroy()
+                        }
+                        context.objectWillChange.send()
                     }
             }
             Button {
