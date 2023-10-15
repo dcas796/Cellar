@@ -53,7 +53,6 @@
 		33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSettingsView.swift; sourceTree = "<group>"; };
 		33106EA52ADAA8D40089A2D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		33106EA82ADBD86C0089A2D1 /* cellar_app_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellar_app_preview.png; sourceTree = "<group>"; };
 		33106EA92ADBDA630089A2D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		336AC6382AC9934F0036E71A /* Cellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336AC63B2AC9934F0036E71A /* CellarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarApp.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		33DA728A2AD09075009AE60E /* CellarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarError.swift; sourceTree = "<group>"; };
 		33DA728D2AD094D7009AE60E /* NewAppSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppSheetView.swift; sourceTree = "<group>"; };
 		33DA728F2AD096CD009AE60E /* IconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
+		33FCF5722ADBDEC9006462BC /* cellar_app_preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellar_app_preview.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		33106EA72ADBD85B0089A2D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				33106EA82ADBD86C0089A2D1 /* cellar_app_preview.png */,
+				33FCF5722ADBDEC9006462BC /* cellar_app_preview.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
