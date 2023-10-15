@@ -8,19 +8,12 @@
 import SwiftUI
 
 enum SettingsTab {
-    case general
     case wine
 }
 
 struct SettingsView: View {
     var body: some View {
         TabView {
-            GeneralSettingsView()
-                .tabItem {
-                    Label("General", systemImage: "gear")
-                }
-                .tag(SettingsTab.general)
-            
             WineSettingsView()
                 .tabItem {
                     Label("Wine Settings", systemImage: "wineglass")

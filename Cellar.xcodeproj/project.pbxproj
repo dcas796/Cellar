@@ -10,7 +10,6 @@
 		3307A27A2AD7FB750080705C /* AppGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307A2792AD7FB750080705C /* AppGridItem.swift */; };
 		3307A27C2AD8074A0080705C /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3307A27B2AD8074A0080705C /* AppsView.swift */; };
 		33106EA02ADAA8440089A2D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106E9F2ADAA8440089A2D1 /* SettingsView.swift */; };
-		33106EA22ADAA88C0089A2D1 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */; };
 		33106EA42ADAA8930089A2D1 /* WineSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */; };
 		33106EA62ADAA8D40089A2D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33106EA52ADAA8D40089A2D1 /* Settings.swift */; };
 		336AC63C2AC9934F0036E71A /* CellarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336AC63B2AC9934F0036E71A /* CellarApp.swift */; };
@@ -50,7 +49,6 @@
 		3307A2792AD7FB750080705C /* AppGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGridItem.swift; sourceTree = "<group>"; };
 		3307A27B2AD8074A0080705C /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		33106E9F2ADAA8440089A2D1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSettingsView.swift; sourceTree = "<group>"; };
 		33106EA52ADAA8D40089A2D1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		33106EA92ADBDA630089A2D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				33106E9F2ADAA8440089A2D1 /* SettingsView.swift */,
-				33106EA12ADAA88C0089A2D1 /* GeneralSettingsView.swift */,
 				33106EA32ADAA8930089A2D1 /* WineSettingsView.swift */,
 			);
 			path = Settings;
@@ -318,7 +315,6 @@
 				3307A27A2AD7FB750080705C /* AppGridItem.swift in Sources */,
 				33DA728B2AD09075009AE60E /* CellarError.swift in Sources */,
 				33106EA42ADAA8930089A2D1 /* WineSettingsView.swift in Sources */,
-				33106EA22ADAA88C0089A2D1 /* GeneralSettingsView.swift in Sources */,
 				33D9ED752AD98B1E0098963C /* View+OptionalAttribute.swift in Sources */,
 				33A5180B2AD1D43C00C9FD46 /* AppListItem.swift in Sources */,
 				33DA72902AD096CD009AE60E /* IconPicker.swift in Sources */,
