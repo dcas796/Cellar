@@ -20,7 +20,7 @@ struct AppGridView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns) {
+        LazyVGrid(columns: columns, spacing: 20) {
             ForEach(apps) { app in
                 AppGridItem(app: app)
             }
@@ -31,6 +31,7 @@ struct AppGridView: View {
 #if DEBUG
 #Preview {
     AppGridView(apps: Context().apps)
+        .environmentObject(Context())
         .frame(width: 400, height: 400)
 }
 #endif
