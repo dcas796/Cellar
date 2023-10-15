@@ -41,7 +41,21 @@ struct WineApp: Identifiable {
     
     @discardableResult
     func createEntity(for context: NSManagedObjectContext) -> WineAppEntity {
-        let entity = WineAppEntity(context: context)
+        var entity = WineAppEntity(context: context)
+        update(entity: &entity)
+        return entity
+    }
+    
+    @discardableResult
+    func updateEntity(for context: NSManagedObjectContext) -> WineAppEntity? {
+        guard var entity = entity(for: context) else {
+            return nil
+        }
+        update(entity: &entity)
+        return entity
+    }
+    
+    private func update(entity: inout WineAppEntity) {
         entity.id = self.id
         entity.name = self.name
         entity.path = self.winePath.path
@@ -49,7 +63,6 @@ struct WineApp: Identifiable {
         entity.icon = self.icon?.tiffRepresentation
         entity.isHudEnabled = self.isHudEnabled
         entity.isEsyncEnabled = self.isEsyncEnabled
-        return entity
     }
 }
 

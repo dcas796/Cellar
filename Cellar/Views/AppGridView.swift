@@ -23,6 +23,10 @@ struct AppGridView: View {
         LazyVGrid(columns: columns, spacing: 20) {
             ForEach(apps) { app in
                 AppGridItem(app: app)
+                    .onAppear {
+                        // FIXME: Workaround for apps not updating when edited.
+                        print(app.name)
+                    }
             }
         }
     }

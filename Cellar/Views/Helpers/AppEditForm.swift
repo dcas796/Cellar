@@ -22,6 +22,7 @@ struct AppEditForm: View {
                 IconPicker(icon: $icon)
             }
         }
+        .formStyle(.grouped)
     }
 }
 

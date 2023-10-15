@@ -32,7 +32,6 @@ struct NewAppSheetView: View {
             .padding([.top], 0)
             .padding([.bottom, .trailing], 20)
         }
-        .formStyle(.grouped)
         .fixedSize(horizontal: false, vertical: true)
         .frame(minWidth: 400, maxWidth: 800)
     }

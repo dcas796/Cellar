@@ -83,28 +83,7 @@ struct ContentView: View {
             NewAppSheetView()
         }
         .sheet(isPresented: $context.isEditAppPresent) {
-            { () -> AnyView in
-                guard let app = context.editApp,
-                      let controller = DataController.shared,
-                      let entity = app.entity(for: controller.context) else {
-                    context.present(error: .other(nil))
-                    context.isEditAppPresent = false
-                    return AnyView(EmptyView())
-                }
-                let appBinding = Binding(get: { app }, set: { newApp in
-                    entity.name = newApp.name
-                    entity.path = newApp.winePath.path
-                    entity.arguments = newApp.arguments
-                    entity.icon = newApp.icon?.tiffRepresentation
-                    entity.isHudEnabled = newApp.isHudEnabled
-                    entity.isEsyncEnabled = newApp.isEsyncEnabled
-                    context.throwing {
-                        try controller.save()
-                    }
-                    context.objectWillChange.send()
-                })
-                return AnyView(EditAppSheetView(app: appBinding))
-            }()
+            EditAppSheetView()
         }
         .alert(isPresented: $context.isErrorPresent, error: context.error) {
             Button("OK", role: .cancel) {}
