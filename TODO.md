@@ -1,6 +1,5 @@
 # TODO
 
-- Put an image of the app in `README.md` (when ready to commit)
 - Run dialog
 - Delete (with backspace) icon in `IconPicker`
 - Replace `EditAppSheetView` with a details page
