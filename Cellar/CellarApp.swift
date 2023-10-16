@@ -43,6 +43,7 @@ struct CellarApp: App {
         
         SwiftUI.Settings {
             SettingsView()
+                .environmentObject(context)
         }
     }
 }

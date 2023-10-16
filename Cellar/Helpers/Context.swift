@@ -130,6 +130,15 @@ final class Context: ObservableObject {
         }
     }
     
+    func openWineSettings() {
+        dispatchAsync {
+            try await self.environment.openWineSettings()
+            await MainActor.run {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
     func throwing<T>(_ code: () throws -> T) -> T? {
         do {
             return try code()

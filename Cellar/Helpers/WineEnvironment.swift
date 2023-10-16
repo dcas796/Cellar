@@ -67,6 +67,11 @@ final class WineEnvironment: ObservableObject {
         return process
     }
     
+    @discardableResult
+    func openWineSettings() async throws -> Process {
+        try await run(command: "winecfg")
+    }
+    
     private func checkExecutableExists() throws {
         guard FileManager.default.fileExists(atPath: wineExecutable.path(percentEncoded: false)) else {
             throw CellarError.wineExecutableNotFound

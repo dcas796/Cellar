@@ -1,6 +1,5 @@
 # TODO
 
-- Add button for running "winecfg" in settings panel
 - Add setting for Wine HiDPI
 - Delete (with backspace) icon in `IconPicker`
 - Replace `EditAppSheetView` with a details page

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WineSettingsView: View {
+    @EnvironmentObject var context: Context
+    
     @State var prefix: String = Settings.shared.winePrefix.path(percentEncoded: false)
     @State var executable: String = Settings.shared.wineExecutable.path(percentEncoded: false)
     
@@ -21,6 +23,11 @@ struct WineSettingsView: View {
             }
             .onSubmit(saveSettings)
             .formStyle(.grouped)
+            
+            Button("Open Wine Settings") {
+                context.openWineSettings()
+            }
+            
             HStack {
                 Spacer()
                 Button("Save") {
@@ -40,4 +47,5 @@ struct WineSettingsView: View {
 
 #Preview {
     WineSettingsView()
+        .environmentObject(Context())
 }
