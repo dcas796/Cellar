@@ -1,7 +1,6 @@
 # TODO
 
 - Add setting for Wine HiDPI
-- Delete (with backspace) icon in `IconPicker`
 - Replace `EditAppSheetView` with a details page
 - Add in details page: arguments, run with/out esync, run with/out hud
 - Add console for running apps

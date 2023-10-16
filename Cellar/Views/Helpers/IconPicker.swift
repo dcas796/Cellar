@@ -51,6 +51,9 @@ struct IconPicker: View {
         .focusable()
         .focusEffectDisabled()
         .focused($isFocused)
+        .onDeleteCommand {
+            self.icon = nil
+        }
         .onPasteCommand(of: [.image]) { providers in
             guard let provider = providers.first else {
                 return
