@@ -10,3 +10,4 @@
 - Add app shortcuts in dock for easy running
 - Fix `CellarApp.showModal` not doing anything when "OK" button pushed
 - Add separate section in `CurrentlyRunningView` for Run commands
+- Add file extension association for .exe files
