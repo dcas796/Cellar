@@ -10,6 +10,7 @@ Currently only supporting macOS Sonoma, as it is required by Apple's Game Portin
 ## Features
 - GUI wrapper for Wine
 - Wine process manager
+- Run custom commands
 - Easily configurable custom launch arguments and wine configurations (coming soon...)
 - Desktop & Dock shortcuts for easy access (coming soon...)
 
