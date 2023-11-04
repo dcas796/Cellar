@@ -11,3 +11,4 @@
 - Add file extension association for .exe files
 - Add spotlight feature for running wine commands?
 - Add icon for app
+- Add history for run dialog
