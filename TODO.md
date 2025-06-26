@@ -1,5 +1,6 @@
 # TODO
 
+- Add a proper logger
 - Add `Show in Finder` menu option with wine apps
 - Improve arugments UI in `DetailAppView`
 - Fix app name not changing when editing on `DetailAppView`
