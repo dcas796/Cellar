@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 final class WineEnvironment: ObservableObject {
     typealias OSProcess = Foundation.Process
     
@@ -121,12 +122,14 @@ final class WineEnvironment: ObservableObject {
         }
     }
     
-    @Sendable private func handleProcessTermination(_ osProcess: OSProcess) {
-        guard let process = runningProcesses.first(where: { $0.pid == osProcess.processIdentifier }) else {
-            print("[WineEnvironment] Ignoring termination of process with pid \(osProcess.processIdentifier) as it is not registered as running")
-            return
+    nonisolated private func handleProcessTermination(_ osProcess: OSProcess) {
+        DispatchQueue.main.async {
+            guard let process = self.runningProcesses.first(where: { $0.pid == osProcess.processIdentifier }) else {
+                print("[WineEnvironment] Ignoring termination of process with pid \(osProcess.processIdentifier) as it is not registered as running")
+                return
+            }
+            self.runningProcesses.remove(process)
         }
-        runningProcesses.remove(process)
     }
 }
 

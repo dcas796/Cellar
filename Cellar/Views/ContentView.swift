@@ -23,6 +23,7 @@ struct ContentView: View {
     @State var selectedNavigationView: NavigationViews = .allApps
     @State var viewStyle: AppViewStyle = .grid
     @State var isNewAppSheetPresent: Bool = false
+    @State var selectedApp: WineApp?
     
     var body: some View {
         NavigationSplitView {
@@ -34,13 +35,30 @@ struct ContentView: View {
             }
             .listStyle(.sidebar)
             .frame(minWidth: 170)
-        } detail: {
+        } content: {
             switch selectedNavigationView {
             case .allApps:
-                AppsView(viewStyle: viewStyle)
+                AppsView(viewStyle: viewStyle, selectedApp: $selectedApp)
+                    .onAppear {
+                        self.selectedApp = nil
+                    }
             case .currentlyRunning:
-                CurrentlyRunningView(viewStyle: viewStyle)
+                CurrentlyRunningView(viewStyle: viewStyle, selectedApp: $selectedApp)
+                    .onAppear {
+                        self.selectedApp = nil
+                    }
             }
+        } detail: {
+            if let app = selectedApp {
+                DetailAppView(app: Binding { app } set: { selectedApp = $0 })
+            } else {
+                Text("No app was selected.")
+                    .font(.title)
+                    .foregroundStyle(Color.secondary)
+            }
+        }
+        .onChange(of: selectedApp) {
+            print("Changing selected app to: \(selectedApp?.name ?? "none")")
         }
         .frame(minWidth: 700,
                maxWidth: .infinity,

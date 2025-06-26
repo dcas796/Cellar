@@ -5,23 +5,38 @@
 //  Created by Dani on 6/10/23.
 //
 
-import Cocoa
+import SwiftUI
 
-struct WineApp: Identifiable {
+struct WineApp: Sendable, Identifiable {
     var id: UUID
     var name: String
     var winePath: WinePath
     var arguments: [String]
-    var icon: NSImage?
+    var iconData: Data?
     var isHudEnabled: Bool
     var isEsyncEnabled: Bool
+    
+    var nsImage: NSImage? {
+        get {
+            guard let iconData else { return nil }
+            return NSImage(data: iconData)
+        }
+        set {
+            iconData = newValue?.tiffRepresentation
+        }
+    }
+    
+    var icon: Image? {
+        guard let nsImage else { return nil }
+        return Image(nsImage: nsImage)
+    }
     
     private init(id: UUID, name: String, winePath: WinePath, arguments: [String], icon: NSImage?, isHudEnabled: Bool? = nil, isEsyncEnabled: Bool? = nil) {
         self.id = id
         self.name = name
         self.winePath = winePath
         self.arguments = arguments
-        self.icon = icon
+        self.iconData = icon?.tiffRepresentation
         self.isHudEnabled = isHudEnabled ?? false
         self.isEsyncEnabled = isEsyncEnabled ?? true
     }
@@ -60,16 +75,18 @@ struct WineApp: Identifiable {
         entity.name = self.name
         entity.path = self.winePath.path
         entity.arguments = self.arguments
-        entity.icon = self.icon?.tiffRepresentation
+        entity.icon = self.iconData
         entity.isHudEnabled = self.isHudEnabled
         entity.isEsyncEnabled = self.isEsyncEnabled
     }
 }
 
 extension WineApp {
+    @MainActor
     static let `default`: WineApp = WineApp(name: "Wine App",
                                             winePath: WinePath(path: "C:\\Program Files (x86)\\Steam\\steam.exe")!,
-                                            arguments: [])
+                                            arguments: [],
+                                            icon: NSImage(named: "ExampleAppIcon"))
     
     static func from(entity: WineAppEntity) -> WineApp? {
         guard let path = WinePath(path: entity.path!) else {
@@ -103,6 +120,6 @@ extension WineApp: Hashable {
 
 extension WineApp: CustomStringConvertible {
     var description: String {
-        "WineApp(id: \(id.uuidString), name: \"\(name)\", winePath: \"\(winePath.path)\", arguments: \(arguments), icon: \(icon == nil ? "nil" : "NSImage(size: \(icon!.size))"))"
+        "WineApp(id: \(id.uuidString), name: \"\(name)\", winePath: \"\(winePath.path)\", arguments: \(arguments), icon: \(icon == nil ? "nil" : "Image()"))"
     }
 }

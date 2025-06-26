@@ -10,17 +10,14 @@ import SwiftUI
 struct AppGridItem: View {
     @EnvironmentObject var context: Context
     var app: WineApp
+    @Binding var selection: WineApp?
     
     static let cornerRadius = CGSize(width: 20, height: 20)
     static let size = CGSize(width: 4 * 40, height: 3 * 40)
     static let maximumSize = CGSize(width: 1.5 * size.width, height: size.height)
     
     var icon: Image {
-        if let icon = app.icon {
-            Image(nsImage: icon)
-        } else {
-            Image(systemName: "macwindow")
-        }
+        app.icon ?? Image(systemName: "macwindow")
     }
     
     var isInitializing: Bool {
@@ -97,6 +94,11 @@ struct AppGridItem: View {
         .focusable()
         .focusEffectDisabled()
         .focused($isFocused)
+        .onChange(of: isFocused) {
+            if isFocused {
+                self.selection = self.app
+            }
+        }
         .contextMenu {
             if isInitializing || isRunning {
                 Button("Stop") {
@@ -127,7 +129,7 @@ struct AppGridItem: View {
 }
 
 #Preview {
-    AppGridItem(app: .default)
+    AppGridItem(app: .default, selection: .constant(nil))
         .environmentObject(Context())
         .padding()
 }

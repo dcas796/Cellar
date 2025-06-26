@@ -10,6 +10,8 @@ import SwiftUI
 struct AppGridView: View {
     var apps: [WineApp]
     
+    @Binding var selectedApp: WineApp?
+    
     private let columns = [
         GridItem(
             .adaptive(
@@ -20,20 +22,23 @@ struct AppGridView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(apps) { app in
-                AppGridItem(app: app)
-                    .onAppear {
-                        // FIXME: Workaround for apps not updating when edited.
-                        print(app.name)
-                    }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(apps) { app in
+                    AppGridItem(app: app, selection: $selectedApp)
+                        .onAppear {
+                            // FIXME: Workaround for apps not updating when edited.
+                            print(app.name)
+                        }
+                }
             }
+            .padding()
         }
     }
 }
 
 #Preview {
-    AppGridView(apps: Context().apps)
+    AppGridView(apps: Context().apps, selectedApp: .constant(nil))
         .environmentObject(Context())
         .frame(width: 400, height: 400)
 }

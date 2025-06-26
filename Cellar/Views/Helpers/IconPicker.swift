@@ -54,6 +54,10 @@ struct IconPicker: View {
         .onDeleteCommand {
             self.icon = nil
         }
+        .onCopyCommand {
+            guard let icon else { return [] }
+            return [NSItemProvider(object: icon)]
+        }
         .onPasteCommand(of: [.image]) { providers in
             guard let provider = providers.first else {
                 return
@@ -62,6 +66,20 @@ struct IconPicker: View {
         }
         .onChange(of: isTargetedForDrop) {
             self.isFocused = isTargetedForDrop
+        }
+        .onDrag {
+            guard let icon else { return NSItemProvider() }
+            return NSItemProvider(object: icon)
+        } preview: {
+            if let icon {
+                Image(nsImage: icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 35, height: 35)
+                    .clipShape(outline)
+            } else {
+                EmptyView()
+            }
         }
         .onDrop(of: [.image], isTargeted: $isTargetedForDrop) { providers in
             guard let provider = providers.first else {

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+@MainActor
 final class Context: ObservableObject {
     @Published var environment: WineEnvironment = WineEnvironment()
     private var environmentCancellable: AnyCancellable?
@@ -20,13 +21,9 @@ final class Context: ObservableObject {
     @Published var isEditAppPresent: Bool = false
     var editApp: WineApp?
     
-    private let wineAppEntityrequest = WineAppEntity.fetchRequest()
-    
     var apps: Array<WineApp> {
         do {
-            return try DataController.shared?.context
-                .fetch(wineAppEntityrequest)
-                .compactMap(WineApp.from(entity:)) ?? []
+            return try DataController.shared?.fetch(WineAppEntity.fetchRequest()) ?? []
         } catch {
             present(error: .failureWhileFetchingApps)
             return []
@@ -42,45 +39,41 @@ final class Context: ObservableObject {
     }
     
     init() {
-        environmentCancellable = environment.objectWillChange.sink { [weak self] _ in
+        environmentCancellable = environment.objectWillChange.sink { [self] _ in
             DispatchQueue.main.async {
-                self?.objectWillChange.send()
+                self.objectWillChange.send()
             }
         }
-        settingsCancellable = Settings.shared.objectWillChange.sink { [weak self] _ in
+        settingsCancellable = Settings.shared.objectWillChange.sink { [self] _ in
             DispatchQueue.main.async {
-                self?.objectWillChange.send()
+                self.objectWillChange.send()
             }
         }
-        dataControllerCancellable = DataController.publisher.objectWillChange.sink { [weak self] _ in
+        dataControllerCancellable = DataController.publisher.objectWillChange.sink { [self] _ in
             DispatchQueue.main.async {
-                self?.objectWillChange.send()
+                self.objectWillChange.send()
             }
         }
     }
     
     func present(error: CellarError) {
-        DispatchQueue.main.async {
-            self.error = error
-            self.isErrorPresent = true
-            print("Error: \(error.localizedDescription)")
-        }
+        self.error = error
+        self.isErrorPresent = true
+        print("Error: \(error.localizedDescription)")
     }
     
     func showEditView(app: WineApp) {
-        DispatchQueue.main.async {
-            self.editApp = app
-            self.isEditAppPresent = true
-        }
+        self.editApp = app
+        self.isEditAppPresent = true
     }
     
     func insert(app: WineApp) {
         guard let controller = DataController.shared else {
             return
         }
-        app.createEntity(for: controller.context)
+        controller.createEntity(app: app)
         do {
-            try controller.context.save()
+            try controller.save()
             self.objectWillChange.send()
         } catch {
             present(error: .failureWhileSavingApps)
@@ -91,12 +84,9 @@ final class Context: ObservableObject {
         guard let controller = DataController.shared else {
             return
         }
-        guard let entity = app.entity(for: controller.context) else {
-            return
-        }
-        controller.context.delete(entity)
+        controller.delete(app: app)
         do {
-            try controller.context.save()
+            try controller.save()
             self.objectWillChange.send()
         } catch {
             present(error: .failureWhileSavingApps)
@@ -154,7 +144,7 @@ final class Context: ObservableObject {
         return nil
     }
     
-    func dispatchAsync(_ code: @escaping () async throws -> Void) {
+    func dispatchAsync(_ code: @Sendable @escaping () async throws -> Void) {
         Task {
             do {
                 try await code()

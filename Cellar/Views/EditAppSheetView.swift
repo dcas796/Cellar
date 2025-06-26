@@ -19,7 +19,7 @@ struct EditAppSheetView: View {
             if let app = Binding($context.editApp) {
                 AppEditForm(name: app.name,
                             path: $path,
-                            icon: app.icon)
+                            icon: app.nsImage)
                     .onSubmit(saveApp)
                 
                 HStack {

@@ -20,9 +20,13 @@ struct CellarApp: App {
                 .environmentObject(context)
         }
         .onChange(of: scenePhase) {
-            (try? DataController.shared?.save()) ?? {
-                print("[CellarApp] Could not auto-save.")
-            }()
+            DispatchQueue.main.async {
+                do {
+                    try DataController.shared?.save()
+                } catch {
+                    print("[CellarApp] Could not auto-save.")
+                }
+            }
         }
         .commands {
             CommandGroup(replacing: .newItem) {

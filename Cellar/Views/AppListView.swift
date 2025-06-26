@@ -10,10 +10,10 @@ import SwiftUI
 struct AppListView: View {
     var apps: [WineApp]
     
-    @State var selectedApps: Set<WineApp> = []
+    @Binding var selectedApp: WineApp?
     
     var body: some View {
-        List(apps, id: \.self, selection: $selectedApps) { app in
+        List(apps, id: \.self, selection: $selectedApp) { app in
             AppListItem(app: app)
                 .padding(5)
         }
@@ -22,5 +22,5 @@ struct AppListView: View {
 }
 
 #Preview {
-    AppListView(apps: Context().apps)
+    AppListView(apps: Context().apps, selectedApp: .constant(nil))
 }

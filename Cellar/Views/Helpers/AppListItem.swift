@@ -12,11 +12,7 @@ struct AppListItem: View {
     var app: WineApp
     
     var icon: Image {
-        if let icon = app.icon {
-            Image(nsImage: icon)
-        } else {
-            Image(systemName: "macwindow")
-        }
+        app.icon ?? Image(systemName: "macwindow")
     }
     
     var isRunning: Bool {

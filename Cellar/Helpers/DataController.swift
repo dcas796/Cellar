@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+@MainActor
 struct DataController {
     static private(set) var shared: DataController? = {
         DataController.initializeShared()
@@ -31,6 +32,24 @@ struct DataController {
                 continuation.resume()
             }
         }
+    }
+    
+    func fetch(_ request: NSFetchRequest<WineAppEntity>) throws -> [WineApp] {
+        try context
+            .fetch(request)
+            .compactMap(WineApp.from(entity:))
+    }
+    
+    func createEntity(app: WineApp) {
+        app.createEntity(for: context)
+    }
+    
+    func delete(app: WineApp) {
+        guard let entity = app.entity(for: context) else {
+            return
+        }
+        
+        context.delete(entity)
     }
     
     func save() throws {
