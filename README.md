@@ -15,7 +15,7 @@ Currently only supporting macOS Sonoma, as it is required by Apple's Game Portin
 - Desktop & Dock shortcuts for easy access (coming soon...)
 
 ## Requirements
-- macOS Sonoma
+- macOS Sonoma or later
 - [Game Porting Toolkit](https://developer.apple.com/games/)
 
 ## Installation of Game Porting Toolkit
